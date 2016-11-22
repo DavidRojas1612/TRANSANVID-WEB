@@ -15,7 +15,7 @@
         <a href="#" class="navbar-brand">DavAnd</a>
         <div class="collapse navbar-collapse" id="navbar1">
         <ul class="nav navbar-nav">
-          <li><a href="Inicio.html">Inicio</a></li>
+          <li><a href="../Inicio.html">Inicio</a></li>
           <li class="active"><a href="">Choferes</a></li>
           <li><a href="frmBuses.php">Buses</a></li>
           <li><a href="frmMarcas.php">Marcas</a></li>
