@@ -27,7 +27,7 @@ over-ride "Weak" message, show font in dark grey
 	}
 
 body {
-	background: url("../images/fondo.jpg") no-repeat center center fixed;
+	  background: url("../images/fondo.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -68,4 +68,13 @@ form[role=login] {
 
 .form-links a {
 		color: #fff;
+}
+
+#tabla1{
+  background: #ffffff;
+}
+
+
+.login{
+  background: ;
 }

@@ -5,7 +5,11 @@
   <title>Main Chofer</title>
   <meta name="viewport" content="width=|, initial-scale=1.0">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-     <link rel="stylesheet" href="estilos.css"><!--Enlace de los estilos del .css -->
+     <link rel="stylesheet" href="../css/estilos.css"><!--Enlace de los estilos del .css -->
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"></link>
+     <link href="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css" rel="stylesheet"></link>
+     <link rel="stylesheet" href="https://rawgit.com/Eonasdan/bootstrap-datetimepicker/master/build/css/bootstrap-datetimepicker.min.css"/>
+
 </head>
 <body>
   <header>
@@ -33,48 +37,87 @@
 <br>
 <br>
 <br>
-  <div class="container">
-    <br>
-    <article class="col-md-6">
-    <form action="" class="form-inline">
-      <div class="form-group">
-        <label for="Cedula">Cedula:&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input class ="form-control" id="Cedula" type="text" placeholder="Escribe tu Cedula">
-      </div>
-    </form>
-    <br>
 
-      <form action="" class="form-inline">
-        <div class="form-group">
-          <label for="Nombre">Nombre:&nbsp;&nbsp;&nbsp;</label>
-          <input class ="form-control" id="Nombre" type="text" placeholder="Escribe tu Nombre">
-        </div>
-      </form>
-      <br>
-    <form action="" class="form-inline">
-      <div class="form-group">
-        <label for="Apellido1,2">Apellidos:&nbsp;</label>
-        <input class ="form-control" id="Apellido1" type="text" placeholder="Escribe tu primer apellido">
-        <input class ="form-control" id="Apellido2" type="text" placeholder="Escribe tu segundo apellido">
-      </div>
-    </form>
-    <br>
-      <form action="" class="form-inline">
-        <div class="form-group">
-          <label for="Celular">Celular:&nbsp;&nbsp;&nbsp;&nbsp;</label>
-          <input class ="form-control" id="Celular" type="text" placeholder="Escribe tu numero de celular">
-        </div>
-      </form>
-      <br>
+<article class="col-md-6">
+  <form id="registrationForm" method="GET" class="form-horizontal mitad" action="insertar.php">
+        <br>
+            <div class="form-group">
+              <label style="color:white" class="col-md-5 control-label">Cedula</label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" name="cedula" placeholder="Escribe tu Cedula"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label style="color:white" class="col-md-5 control-label">Nombre</label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" name="nombre" placeholder="Escribe tu Nombre"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label style="color:white" class="col-md-5 control-label">Apellidos</label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" name="apellido1" placeholder="Escribe tu primer apellido"/>
+                <br>
+              <div class="col-md-20">
+                <input type="text" class="form-control" name="apellido2" placeholder="Escribe tu segundo apellido"/>
+              </div>
+            </div>
+          </div>
+            <div class="form-group">
+              <label style="color:white" class="col-md-5 control-label">Celular</label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" name="celular" placeholder="Escribe tu numero de celular"/>
+              </div>
+            </div>
+         <div class="form-group">
+              <div class="col-md-9 col-lg-offset-3">
+                <button type="submit" class="btn btn-success left">Registrarse</button>
+              </div>
+            </div>
 
-        <form action="" class="form-inline">
-          <button class="btn btn-primary">Insertar</button>
-          <button class="btn btn-primary">Borrar</button>
-          <button class="btn btn-primary">Actualizar</button>
-          <button class="btn btn-primary">Listar</button>
-        </form>
+  </form>
 
-  </article>
+          <div class="col-md-9 col-lg-offset-3">
+          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#loginModal">
+          <span></span> Borrar</button>
+          </div>
+
+          <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+          	 <div class="modal-content">
+          		 <div class="modal-header">
+          			 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          			 <h4 class="modal-title">Eliminar Chofer</h4>
+          		 </div>
+               <div class="modal-body">
+          			 <form id="loginForm" method="GET" class="form-horizontal" action="borrar.php">
+          				 <div class="form-group">
+          					 <label class="col-md-3 control-label">Cedula</label>
+          					 <div class="col-md-7">
+          						 <input type="text" class="form-control" name="usuario" />
+          					 </div>
+          				 </div>
+                   <div class="form-group">
+          					 <div class="col-md-5 col-md-offset-3">
+          						 <button type="submit" class="btn btn-warning">Borrar</button>
+          					 </div>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+
+
+</article>
+
+  <div class="container-fluid">
+  <script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+  <script type="text/javascript" src="../js/validatorForm.js"></script>
+  <script type="text/javascript" src="../js/eliminar.js"></script>
+  <script src="//oss.maxcdn.com/momentjs/2.8.2/moment.min.js"></script>
+  <script src="https://rawgit.com/Eonasdan/bootstrap-datetimepicker/master/src/js/bootstrap-datetimepicker.js"></script>
+
   <article class="col-md-6">
     <p>
       <?php
@@ -87,7 +130,7 @@
           echo "<tr>";
           echo '<th class="info">'.CEDULA.'</th>';
           echo '<th class="warning">'.NOMBRE.'</th>';
-          echo '<th class="succes">'.APELLIDO1.'</th>';
+          echo '<th class="info">'.APELLIDO1.'</th>';
           echo '<th class="danger">'.APELLIDO2.'</th>';
           echo '<th class="info">'.CELULAR.'</th>';
           echo "</tr>";
@@ -95,7 +138,7 @@
             echo "<tr>";
             echo '<td class="info">'.$row[0].'</td>';
             echo '<td class="warning">'.$row[1].'</td>';
-            echo '<td class="succes">'.$row[2].'</td>';
+            echo '<td class="info">'.$row[2].'</td>';
             echo '<td class="danger">'.$row[3].'</td>';
             echo '<td class="info">'.$row[4].'</td>';
             echo "</tr>";
@@ -109,9 +152,10 @@
   </article>
   </div>
   <br>
+
   <footer>
     <div class="container">
-      <h3>Por David Y Andres</h3>
+      <h3 style="color:white">Por David Y Andres</h3>
     </div>
 
   </footer>
