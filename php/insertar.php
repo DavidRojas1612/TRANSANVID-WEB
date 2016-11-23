@@ -15,10 +15,10 @@
 				}//if else
 				mysqli_close($link);
 			}//nuevo
-		$ced = $_GET['Cedula'];
-		$nom = $_GET['Nombre'];
-		$ap1 = $_GET['Apellido1'];
-		$ap2 = $_GET['Apellido2'];
-		$cel = $_GET['Celular'];
+		$ced = $_GET['cedula'];
+		$nom = $_GET['nombre'];
+		$ap1 = $_GET['apellido1'];
+		$ap2 = $_GET['apellido2'];
+		$cel = $_GET['celular'];
 		nuevo($ced, $nom, $ap1, $ap2, $cel);
 ?>
