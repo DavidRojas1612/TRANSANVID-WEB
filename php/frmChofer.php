@@ -5,7 +5,7 @@
   <title>Main Chofer</title>
   <meta name="viewport" content="width=|, initial-scale=1.0">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-     <link rel="stylesheet" href="estilos.css"><!--Enlace de los estilos del .css -->
+    <!-- <link rel="stylesheet" href="../css/estilos.css">Enlace de los estilos del .css -->
 </head>
 <body>
   <header>
@@ -33,48 +33,35 @@
 <br>
 <br>
 <br>
-  <div class="container">
+  <div class="row-main container">
     <br>
-    <article class="col-md-6">
-    <form action="" class="form-inline">
-      <div class="form-group">
-        <label for="Cedula">Cedula:&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input class ="form-control" id="Cedula" type="text" placeholder="Escribe tu Cedula">
-      </div>
-    </form>
-    <br>
-
-      <form action="" class="form-inline">
+    <form class="" name="f1"  method="GET" action="insertar.php">
+      <article class="table-bordered col-xs-6">
+        <br>
+        <div class="form-group">
+          <label for="Cedula">Cedula:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input class ="form-control" name="Cedula" type="text" placeholder="Escribe tu Cedula">
+        </div>
+        <br>
         <div class="form-group">
           <label for="Nombre">Nombre:&nbsp;&nbsp;&nbsp;</label>
-          <input class ="form-control" id="Nombre" type="text" placeholder="Escribe tu Nombre">
+          <input class ="form-control" name="Nombre" type="text" placeholder="Escribe tu Nombre">
         </div>
-      </form>
-      <br>
-    <form action="" class="form-inline">
-      <div class="form-group">
-        <label for="Apellido1,2">Apellidos:&nbsp;</label>
-        <input class ="form-control" id="Apellido1" type="text" placeholder="Escribe tu primer apellido">
-        <input class ="form-control" id="Apellido2" type="text" placeholder="Escribe tu segundo apellido">
-      </div>
-    </form>
-    <br>
-      <form action="" class="form-inline">
+        <br>
+        <div class="form-group">
+          <label for="Apellido1,2">Apellidos:&nbsp;</label>
+          <input class ="form-control" name="Apellido1" type="text" placeholder="Escribe tu primer apellido">
+          <input class ="form-control" name="Apellido2" type="text" placeholder="Escribe tu segundo apellido">
+        </div>
+        <br>
         <div class="form-group">
           <label for="Celular">Celular:&nbsp;&nbsp;&nbsp;&nbsp;</label>
-          <input class ="form-control" id="Celular" type="text" placeholder="Escribe tu numero de celular">
+          <input class ="form-control" name="Celular" type="text" placeholder="Escribe tu numero de celular">
         </div>
-      </form>
-      <br>
-
-        <form action="" class="form-inline">
-          <button class="btn btn-primary">Insertar</button>
-          <button class="btn btn-primary">Borrar</button>
-          <button class="btn btn-primary">Actualizar</button>
-          <button class="btn btn-primary">Listar</button>
-        </form>
-
-  </article>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Insertar">
+      </article>
+    </form>
   <article class="col-md-6">
     <p>
       <?php
