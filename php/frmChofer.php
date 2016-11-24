@@ -27,6 +27,9 @@
           <li><a href="frmRutas.php">Rutas</a></li>
           <li><a href="frmViajes.php">Viajes</a></li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html">Log out</a></li>
+        </ul>
         </div>
         </div>
       </nav>
@@ -77,11 +80,12 @@
 
   </form>
 
-          <div class="col-md-9 col-lg-offset-3">
+        <div class="col-md-9 col-lg-offset-3">
           <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#loginModal">
           <span></span> Borrar</button>
-          </div>
-
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal2">
+          <span></span> Actualizar</button>
+        </div>
           <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
           	 <div class="modal-content">
@@ -101,13 +105,64 @@
           					 <div class="col-md-5 col-md-offset-3">
           						 <button type="submit" class="btn btn-warning">Borrar</button>
           					 </div>
-                 </div>
-                 </div>
-                 </div>
-                 </div>
+                   </div>
+                  </form>
+                </div>
+             </div>
+           </div>
+         </div>
+           <br>
+            <br>
 
+               <div class="modal fade" id="loginModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title">Actualizar Chofer</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form id="loginForm2" method="GET" class="form-horizontal" action="actualizar.php">
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">Cedula</label>
+                          <div class="col-md-7">
+                            <input type="text" class="form-control" name="usuario" placeholder="Escribe tu cedula"/>
+                          </div>
+                        </div>
+                       <div class="form-group">
+                         <label class="col-md-3 control-label">Nombre</label>
+                         <div class="col-md-7">
+                           <input type="text" class="form-control" name="nombre" placeholder="Escribe tu Nombre"/>
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <label class="col-md-3 control-label">Apellidos</label>
+                         <div class="col-md-7">
+                           <input type="text" class="form-control" name="apellido1" placeholder="Escribe tu primer apellido"/>
+                           <br>
+                         <div class="col-md-20">
+                           <input type="text" class="form-control" name="apellido2" placeholder="Escribe tu segundo apellido"/>
+                         </div>
+                       </div>
+                     </div>
+                       <div class="form-group">
+                         <label class="col-md-3 control-label">Celular</label>
+                         <div class="col-md-7">
+                           <input type="text" class="form-control" name="celular" placeholder="Escribe tu numero de celular"/>
+                         </div>
+                       </div>
+                        <div class="form-group">
+                          <div class="col-md-5 col-md-offset-3">
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                          </div>
+                      </div>
+                    </form>
+                      </div>
+                      </div>
+                      </div>
+                    </div>
 
-</article>
+  </article>
 
   <div class="container-fluid">
   <script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>
@@ -115,6 +170,7 @@
   <script src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
   <script type="text/javascript" src="../js/validatorForm.js"></script>
   <script type="text/javascript" src="../js/eliminar.js"></script>
+  <script type="text/javascript" src="../js/actualizar.js"></script>
   <script src="//oss.maxcdn.com/momentjs/2.8.2/moment.min.js"></script>
   <script src="https://rawgit.com/Eonasdan/bootstrap-datetimepicker/master/src/js/bootstrap-datetimepicker.js"></script>
 
